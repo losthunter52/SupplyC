@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.6"
+	prefWidth="720.0" xmlns="http://javafx.com/javafx/17"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.view.controleClientesController">
+	<children>
+		<TableView fx:id="tabelaItens" layoutX="17.0"
+			layoutY="103.0" prefHeight="385.0" prefWidth="686.0">
+			<columns>
+				<TableColumn fx:id="columnDescricao" editable="false"
+					prefWidth="526.4000244140625" resizable="false" sortable="false"
+					text="Descrição" />
+				<TableColumn fx:id="columnAssociado" minWidth="0.0"
+					prefWidth="140.79998779296875" resizable="false" sortable="false"
+					text="Associado" />
+			</columns>
+		</TableView>
+		<ComboBox fx:id="boxEmpresas" layoutX="74.0" layoutY="19.0"
+			onAction="#boxEmpresasClicked" prefHeight="26.0" prefWidth="629.0"
+			promptText="Selecione uma empresa..." />
+		<Label layoutX="16.0" layoutY="23.0" text="Empresa" />
+		<Label layoutX="255.0" layoutY="69.0" text="Itens Associados:" />
+		<Button fx:id="btnMarcarTodos" layoutX="584.0" layoutY="65.0"
+			mnemonicParsing="false" onAction="#btnMarcarTodosClicked"
+			prefHeight="26.0" prefWidth="118.0" text="Marcar Todos" />
+		<Button fx:id="btnMarcarSelecionado" layoutX="428.0"
+			layoutY="65.0" mnemonicParsing="false"
+			onAction="#btnMarcarSelecionadoClicked" prefHeight="26.0"
+			prefWidth="137.0" text="Marcar Selecionado" />
+	</children>
+</AnchorPane>
